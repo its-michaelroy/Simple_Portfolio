@@ -2125,6 +2125,26 @@ input[type="radio"] + label:before {
   font-weight: 900;
 }
 
+.avatar-container {
+  text-align: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto;
+}
+
+.primary {
+  color: #ffffff80;
+  border: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px; /* Adjust as needed */
+}
+
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
 }
@@ -2543,10 +2563,10 @@ input[type="button"],
   background-color: transparent;
   border-radius: 0.35em;
   border: solid 3px #efefef;
-  color: #787878 !important;
+  color: #575757 !important;
   cursor: pointer;
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
   height: 3.15em;
   height: calc(2.75em + 6px);
   line-height: 2.75em;
@@ -2689,9 +2709,9 @@ input[type="button"]:disabled,
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-  background-color: #1f1815;
+  background-color: #110d0c;
   background-attachment: scroll, scroll;
-  background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+  background-image: url("../../images/mountain3.jpg");
   background-position: top left, top left;
   background-repeat: repeat, no-repeat;
   background-size: auto, 150%;
@@ -2735,7 +2755,7 @@ input[type="button"]:disabled,
 }
 
 #header h1 {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.35em;
   line-height: 1.75em;
   margin: 0;
@@ -2753,7 +2773,7 @@ input[type="button"]:disabled,
 }
 
 #footer .icons a {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 #footer .copyright {
@@ -3343,4 +3363,14 @@ body.is-touch .poptrox-popup .closer {
 
 .image.fit:hover .view-button {
   display: inline-block; /* Show the existing view button on hover */
+}
+
+#header .button#downloadCV {
+  color: rgba(255, 255, 255, 0.9) !important; /* Force text color to white */
+}
+
+#header .button#downloadCV:hover {
+  background-color: #faf9f9; /* Fill button with white */
+  color: #49bf9d !important; /* Set text color to green */
+  font-weight: bold; /* Make text bold */
 }
