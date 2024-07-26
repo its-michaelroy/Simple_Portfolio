@@ -5,38 +5,22 @@ function onVerify() {
   hcaptchaVerified = true;
 }
 
-// Prevent form submission if hCaptcha is not verified
+// Handle form submission
 document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission
-  if (hcaptchaVerified) {
-    const email = document.getElementById("email").value;
-    document.getElementById("subject").value = `New submission from ${email}`;
-
-    // Use fetch to submit the form data
-    fetch(this.action, {
-      method: "POST",
-      body: new FormData(this),
-    })
-      .then((response) => {
-        if (response.ok) {
-          clearFormFields(); // Clear fields on successful submission
-          alert("Your message has been sent!");
-        } else {
-          alert("There was a problem with your submission.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("There was a problem with your submission.");
-      });
+  if (!hcaptchaVerified) {
+    e.preventDefault(); // Prevent the default form submission if hCaptcha is not verified
+    const errorMessage = document.createElement("div");
+    errorMessage.textContent =
+      "hCaptcha not verified. Please complete the captcha.";
+    errorMessage.style.color = "red";
+    document.body.appendChild(errorMessage);
   } else {
-    alert("Please complete the hCaptcha challenge."); // Alert if hCaptcha is not verified
+    // Allow the form to be submitted
+    // Use a timeout to clear the form fields after submission
+    setTimeout(() => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }, 1000); // Adjust the timeout as needed
   }
 });
-
-// Function to clear form fields
-function clearFormFields() {
-  document.getElementById("name").value = "Name";
-  document.getElementById("email").value = "Email";
-  document.getElementById("message").value = "Message";
-}
