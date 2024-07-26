@@ -122,7 +122,7 @@
           </article>
           <article class="col-6 col-12-xsmall work-item">
             <a
-              href="https://github.com/vivekmishra9631/PayBridge"
+              href="https://pay-bridge-bitcoin-games.vercel.app/"
               class="image fit thumb"
               target="_blank"
               ><img src="images/paybridge_logo.jpg" alt="Michael Roy"
@@ -222,10 +222,14 @@
           <div class="col-8 col-12-small">
             <form
               method="POST"
-              action="https://formspree.io/f/xldrgkro"
+              action="https://api.web3forms.com/submit"
               class="row gtr-uniform gtr-50"
             >
-              <input type="hidden" name="subject" id="subject" />
+              <input
+                type="hidden"
+                name="access_key"
+                value="da00b9ec-b11d-424c-af36-d19b232d365a"
+              />
               <div class="col-6 col-12-xsmall">
                 <input
                   type="text"
@@ -254,12 +258,15 @@
                 ></textarea>
               </div>
               <div class="col-12">
-                <div
-                  class="h-captcha"
-                  data-sitekey="a3a0feb2-f424-4848-8838-a640bea6ae62"
-                  data-callback="onVerify"
-                ></div>
+                <div class="h-captcha" data-captcha="true"></div>
               </div>
+              <!-- Honeypot Spam Protection -->
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
               <div class="col-12">
                 <ul class="actions">
                   <li>
@@ -267,6 +274,11 @@
                   </li>
                 </ul>
               </div>
+              <input
+                type="hidden"
+                name="from_name"
+                value="From Michaelroy.dev"
+              />
             </form>
           </div>
         </div>
@@ -339,7 +351,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <!-- Required only if you are using hCaptcha or Advanced File Upload. -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
