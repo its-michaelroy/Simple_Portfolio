@@ -152,6 +152,7 @@ mark {
   right: 10px;
   font-size: 24px;
   cursor: pointer;
+  z-index: 999;
 }
 
 .fa-sun {
@@ -169,6 +170,19 @@ mark {
 
 .dark-mode a {
   color: #49bf9d;
+}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode #learn-more-btn,
+.dark-mode input[type="submit"],
+.dark-mode p {
+  color: #fff !important;
+}
+
+.dark-mode #learn-more-btn:hover,
+.dark-mode input[type="submit"]:hover {
+  color: #49bf9d !important;
 }
 
 input::-moz-focus-inner {
