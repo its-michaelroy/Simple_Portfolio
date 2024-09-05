@@ -1965,6 +1965,15 @@ textarea {
   width: 100%;
 }
 
+/* Styles for hCaptcha on mobile screens */
+@media (max-width: 767px) {
+  .h-captcha {
+    width: 100%;
+    transform: scale(0.77); /* Adjust the scale as needed */
+    transform-origin: left top; /* Ensure the hCaptcha is aligned to the left */
+  }
+}
+
 input[type="text"]:invalid,
 input[type="password"]:invalid,
 input[type="email"]:invalid,
