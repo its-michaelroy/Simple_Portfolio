@@ -15,6 +15,16 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <div class="inner">
+      <!-- ... existing header content ... -->
+      <div id="theme-toggle"></div>
+    </div>
   </head>
   <body class="is-preload">
     <!-- Header -->
@@ -56,32 +66,38 @@
           problem-solving and innovation. My journey took a significant turn
           when I was deployed to Afghanistan, where I served as a military
           police officer, working closely with the Afghan Army. This experience
-          instilled in me a strong work ethic and discipline, and it was during
-          this time I was encouraged by special ops personnel to pursue IT. This
-          advice set me on a path that led to critical roles in data center
-          management and network optimization for organizations like Oracle.
+          instilled in me
+          <span id="more" class="hidden">
+            a strong work ethic and discipline, and it was during this time I
+            was encouraged by special ops personnel to pursue IT. This advice
+            set me on a path that led to critical roles in data center
+            management and network optimization for organizations like Oracle.
+          </span>
         </p>
 
         <p>
-          My career took another pivotal step during my time at UPMC
-          CancerCenters, where I realized that technology could have a profound
-          impact on people's lives. Although I wasn't directly helping patients,
-          ensuring that the doctors and nurses had reliable technology
-          reaffirmed my belief that the tech field is where I could do the most
-          good for humanity. Recently, I graduated from Code Platoon's
-          Full-Stack Software Engineering program and am currently participating
-          in their part-time DevOps & Cloud Engineering course. My passion for
-          technology extends to AI, machine learning, and innovative solutions
-          in healthcare. I'm excited to continue expanding my expertise and
-          collaborating with like-minded professionals. Whether you're looking
-          to discuss projects, career opportunities, or simply exchange
-          knowledge in the tech space, I'd love to connect!
+          <span id="more" class="hidden">
+            My career took another pivotal step during my time at UPMC
+            CancerCenters, where I realized that technology could have a
+            profound impact on people's lives. Although I wasn't directly
+            helping patients, ensuring that the doctors and nurses had reliable
+            technology reaffirmed my belief that the tech field is where I could
+            do the most good for humanity. Recently, I graduated from Code
+            Platoon's Full-Stack Software Engineering program and am currently
+            participating in their part-time DevOps & Cloud Engineering course.
+            My passion for technology extends to AI, machine learning, and
+            innovative solutions in healthcare. I'm excited to continue
+            expanding my expertise and collaborating with like-minded
+            professionals. Whether you're looking to discuss projects, career
+            opportunities, or simply exchange knowledge in the tech space, I'd
+            love to connect!
+          </span>
         </p>
         <ul class="actions">
           <li>
-            <a href="https://mrcodewizard.com" class="button" target="_blank"
-              >Learn More</a
-            >
+            <button class="button learn-more" onclick="toggleParagraph()">
+              Learn More
+            </button>
           </li>
         </ul>
       </section>
@@ -365,6 +381,8 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/year.js"></script>
+    <script src="assets/js/fullparagrph.js"></script>
+    <script src="assets/js/darkmode.js"></script>
     <script src="assets/js/formHandler.js" defer></script>
     <script>
       window.va =

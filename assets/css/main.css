@@ -146,6 +146,31 @@ mark {
   color: inherit;
 }
 
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.fa-sun {
+  color: #ffc107;
+}
+
+.fa-moon {
+  color: #6c757d;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #ddd;
+}
+
+.dark-mode a {
+  color: #49bf9d;
+}
+
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -170,6 +195,10 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.hidden {
+  display: none;
 }
 
 body {
