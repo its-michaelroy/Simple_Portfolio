@@ -2622,7 +2622,7 @@ input[type="button"],
   height: 3.15em;
   height: calc(2.75em + 6px);
   line-height: 2.75em;
-  min-width: 100%;
+  min-width: 45%;
   padding: 0 1.5em;
   text-align: center;
   text-decoration: none;
@@ -2835,7 +2835,7 @@ input[type="button"]:disabled,
 
 #footer .icons a {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.5em; /* come back later */
+  font-size: 1.3em; /* come back later */
 }
 
 #footer .copyright {
@@ -3428,11 +3428,11 @@ body.is-touch .poptrox-popup .closer {
   display: inline-block; /* Show the existing view button on hover */
 }
 
-#header .button#downloadCV {
+#header .button#downloadCV, #header .button#downloadCV2 {
   color: rgba(255, 255, 255, 0.9) !important; /* Force text color to white */
 }
 
-#header .button#downloadCV:hover {
+#header .button#downloadCV:hover, #header .button#downloadCV2:hover {
   background-color: #faf9f9; /* Fill button with white */
   color: #49bf9d !important; /* Set text color to green */
   font-weight: bold; /* Make text bold */
