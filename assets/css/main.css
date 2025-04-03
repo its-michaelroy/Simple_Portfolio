@@ -114,6 +114,12 @@ body {
   line-height: 1;
 }
 
+.CVButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
 ol,
 ul {
   list-style: none;
