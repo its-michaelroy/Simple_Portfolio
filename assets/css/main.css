@@ -116,8 +116,25 @@ body {
 
 .CVButtons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 1em; /* Add a 1em space between the buttons */
   margin-bottom: 1em;
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
+}
+
+.CVButtons .button {
+  flex: 1; /* Make buttons take equal space */
+  min-width: 200px; /* Ensure buttons don't get too small */
+  max-width: 250px; /* Optional: limit the maximum width */
+}
+
+#icons {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent icons from wrapping */
+  justify-content: center; /* Center the icons horizontally */
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 ol,
@@ -2837,6 +2854,16 @@ input[type="button"]:disabled,
 #footer .icons {
   margin: 1em 0 0 0;
   text-align: center;
+  display: flex;           /* Ensure flexbox is applied */
+  flex-wrap: nowrap;       /* Prevent wrapping to multiple lines */
+  justify-content: center; /* Center the icons horizontally */
+  overflow-x: auto;        /* Allow horizontal scrolling if needed */
+  white-space: nowrap;     /* Keep items on one line */
+}
+
+#footer .icons li {
+  display: inline-block;   /* Ensure inline behavior within flex */
+  padding: 0 1em 0 0;      /* Maintain spacing between icons */
 }
 
 #footer .icons a {
@@ -3315,6 +3342,13 @@ body.is-touch .poptrox-popup .closer {
 @media screen and (max-width: 736px) {
   /* Basic */
 
+  #footer .icons a {
+    font-size: 1em;        /* Reduce icon size */
+  }
+  #footer .icons li {
+    padding: 0 0.75em 0 0; /* Reduce padding between icons */
+  }
+
   h1 {
     font-size: 1.5em;
   }
@@ -3384,6 +3418,17 @@ body.is-touch .poptrox-popup .closer {
   .poptrox-popup .nav-next:before,
   .poptrox-popup .nav-previous:before {
     margin-top: -1em;
+  }
+
+  .CVButtons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally when stacked */
+    gap: 0.5em; /* Reduce the space between stacked buttons to 0.5em */
+  }
+
+  .CVButtons .button {
+    width: 100%; /* Make buttons full-width on mobile */
+    max-width: 300px; /* Optional: limit the maximum width on mobile */
   }
 }
 
